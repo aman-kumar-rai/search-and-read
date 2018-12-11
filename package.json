@@ -9,7 +9,10 @@
     "build": "webpack --mode=production"
   },
   "babel": {
-    "presets": ["@babel/preset-env", "@babel/preset-react"]
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   },
   "repository": {
     "type": "git",
