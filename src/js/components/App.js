@@ -40,7 +40,7 @@ class App extends React.Component {
         if (data && data.results && data.results.length >= 1) {
           const image = data.results[0];
 
-          const src = image.urls.regular;
+          const src = image.urls.small;
           const uploader = image.user.name;
           const altText = image.description;
 
@@ -55,6 +55,15 @@ class App extends React.Component {
              loading: false
            }
          })
+        }
+        // if the searched keyword does not return any image...
+        else{
+          this.setState(prevState => {
+            return {
+              image: null,
+              loading: false
+            }
+          });
         }
       })
       .catch(err => console.log("Something wrong with the response ", err));
@@ -82,6 +91,17 @@ class App extends React.Component {
           });
 
         }
+        // if the searched keyword does not return docs...
+        else{
+          this.setState(prevState => {
+            return {
+              docs: [],
+              loading: false
+            }
+          });
+        }
+
+
       })
       .catch(err => console.log("Something wrong with the response ", err));
   }

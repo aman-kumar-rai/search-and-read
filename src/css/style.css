@@ -7,7 +7,7 @@
 body,
 html {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 }
 
 body {
@@ -18,7 +18,7 @@ body {
 /* style for the div#app container component... */
 #app {
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
 
   /* flex-container part */
   display: flex;
