@@ -22,7 +22,7 @@ class Image extends React.Component {
       <figure>
         <img src={condition ? src: './../src/images/icon-no-image.png' } alt={condition ? altText : 'No image available'} />
         <figcaption>
-          {condition ? uploader : 'No image available'}
+          {condition ? `${altText} by ${uploader}` : 'No image available'}
         </figcaption>
       </figure>
     );
