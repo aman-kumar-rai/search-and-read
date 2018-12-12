@@ -229,3 +229,7 @@ figcaption {
   justify-content: center;
   align-items: center;
 }
+
+#loading-text{
+  color: black;
+}
