@@ -53,10 +53,6 @@ header {
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
-
-  position: sticky;
-  top: 0px;
-  left: 0px;
 }
 
 /* style for the header with id search title */
@@ -219,4 +215,17 @@ figcaption {
   font-size: 1em;
   letter-spacing: 1px;
   word-spacing: 5px;
+}
+
+/* style for the div that contains the loading component */
+#loading{
+  width: 100%;
+  min-height: 200px;
+
+  /* flex-container part */
+  display: flex;
+  flex-flow: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
