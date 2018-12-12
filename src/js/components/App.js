@@ -40,7 +40,7 @@ class App extends React.Component {
         if (data && data.results && data.results.length >= 1) {
           const image = data.results[0];
 
-          const src = image.urls.small;
+          const src = image.urls.regular;
           const uploader = image.user.name;
           const altText = image.description;
 

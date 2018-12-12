@@ -37,7 +37,7 @@ header {
 /* style for the header with id search title */
 #search-title {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 300;
   color: white;
 }
@@ -62,7 +62,7 @@ header {
   max-width: 70%;
 
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
 
   margin-right: 5px;
   margin-left: 2px;
@@ -81,7 +81,7 @@ header {
 /* style for submit button for search... */
 #search-submit {
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.8em;
   min-width: 50px;
   padding: 10px;
 
@@ -96,11 +96,39 @@ header {
 /* style for the main element and its children...////////////// */
 #data-container{
   border: 2px solid dodgerblue;
+  width: 100%;
+
+  /* flex-container part */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  justify-content: center;
+  align-items: center;
 }
 
-/* style for the image container */
-#img-container{
-  border: 2px solid green;
+/* style for figure element and its children */
+figure {
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  margin: 0px 0px 10px 0px;
+}
+
+figure img {
+  width: 100%;
+  box-shadow: 0 5px 5px lightgray;
+}
+
+figcaption {
+  bottom: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 1em;
+  padding: 0.8em 1.4em;
+  position: absolute;
+  width: 100%;
 }
 
 /* style for the articles container */
