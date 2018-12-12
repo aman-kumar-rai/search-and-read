@@ -10,7 +10,7 @@ class App extends React.Component {
     this.state = {
       loading: false,
       image: null,
-      docs: null
+      docs: []
     };
 
     // fixing the this...
@@ -76,7 +76,7 @@ class App extends React.Component {
           // setting the docs property of state to the data received...
           this.setState(prevState => {
             return {
-              docs: data.response,
+              docs: data.response.docs,
               loading: false
             }
           });
@@ -89,7 +89,6 @@ class App extends React.Component {
   onKeywordSubmit(event) {
     // stopping the default form submission action...
     event.preventDefault();
-
     // storing the keyword...
     const keyword = this.ref.current.value;
 
@@ -100,7 +99,6 @@ class App extends React.Component {
     this.setState({
       loading: true
     });
-
     // sending the request for image by calling getImage()
     this.getImage(keyword);
 

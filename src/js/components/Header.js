@@ -1,4 +1,5 @@
 const React = require("react");
+const PropTypes = require('prop-types');
 
 const Header = React.forwardRef((props, ref) => {
   return (
@@ -21,5 +22,9 @@ const Header = React.forwardRef((props, ref) => {
   );
 });
 
+// prop-type check
+Header.propTypes = {
+  onKeywordSubmit: PropTypes.func.isRequired
+}
 
 module.exports = Header;

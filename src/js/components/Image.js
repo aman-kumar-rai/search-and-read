@@ -6,6 +6,7 @@ class Image extends React.Component {
   }
 
   render() {
+    // console.log('Inside Image render() ',this.props);
     return <section id="img-container" />;
   }
 }
