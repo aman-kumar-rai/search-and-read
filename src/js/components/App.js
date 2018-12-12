@@ -8,7 +8,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: false,
+      image: null,
+      docs: null
     };
 
     // fixing the this...
@@ -33,7 +35,28 @@ class App extends React.Component {
     )
       .then(response => response.json())
       .catch(err => console.log("Something wrong with the request ", err))
-      .then(data => console.log(data))
+      .then(data => {
+        // checking to see if the response has the desired data...
+        if (data && data.results && data.results.length >= 1) {
+          const image = data.results[0];
+
+          const src = image.urls.regular;
+          const uploader = image.user.name;
+          const altText = image.description;
+
+          // setting the image property of the state to the data that we retrieved...
+         this.setState(prevState => {
+           return {
+             image: {
+               src, 
+               uploader,
+               altText
+             },
+             loading: false
+           }
+         })
+        }
+      })
       .catch(err => console.log("Something wrong with the response ", err));
   }
 
@@ -44,7 +67,22 @@ class App extends React.Component {
     )
       .then(response => response.json())
       .catch(err => console.log("Something wrong with the request ", err))
-      .then(data => console.log(data))
+      .then(data => {
+        if (
+          data.response &&
+          data.response.docs &&
+          data.response.docs.length >= 1
+        ) {
+          // setting the docs property of state to the data received...
+          this.setState(prevState => {
+            return {
+              docs: data.response,
+              loading: false
+            }
+          });
+
+        }
+      })
       .catch(err => console.log("Something wrong with the response ", err));
   }
 
@@ -71,10 +109,13 @@ class App extends React.Component {
   }
 
   render() {
+    // destructuring required variables from state...
+    const {loading, image, docs } = this.state;
+
     return (
       <React.Fragment>
         <Header ref={this.ref} onKeywordSubmit={this.onKeywordSubmit} />
-        {this.state.loading ? <Loading /> : <MainContainer />}
+        {loading ? <Loading /> : <MainContainer image={image} docs={docs} />}
       </React.Fragment>
     );
   }
