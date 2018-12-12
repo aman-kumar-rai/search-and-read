@@ -10,7 +10,7 @@ class ArticleList extends React.Component {
 
         {
           this.props.docs.length == 0 
-          ? <div>No articles to show</div>
+          ? <div id='error-div'>No articles to show</div>
           : this.props.docs.map(doc => {
             return <Article snippet={doc.snippet} url={doc.web_url}  key={doc._id} heading={doc.headline.main} />
           })

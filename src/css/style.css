@@ -92,10 +92,8 @@ header {
   cursor: pointer;
 }
 
-
 /* style for the main element and its children...////////////// */
-#data-container{
-  border: 2px solid dodgerblue;
+#data-container {
   width: 100%;
 
   /* flex-container part */
@@ -112,8 +110,7 @@ figure {
   width: 100%;
   position: relative;
   text-align: center;
-
-  margin: 0px 0px 10px 0px;
+  margin: 5px 0px 10px 0px;
 }
 
 figure img {
@@ -132,6 +129,66 @@ figcaption {
 }
 
 /* style for the articles container */
-#articles-container{
-  border: 2px solid red;
+#articles-container {
+  width: 100%;
+
+  /* flex-container part */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
+/* style for the error div */
+#error-div {
+  color: red;
+  font-size: 2em;
+  font-weight: 200;
+  text-transform: capitalize;
+}
+
+/* style for an article container */
+.article {
+  background: url("../images/icon-article.png"), #ffffff;
+  background-position: 1.5em 1.2em;
+  background-repeat: no-repeat;
+  background-size: 1.8em;
+  border: solid 1px #dbe2e8;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 0.5em;
+  padding: 1em 2em 1em 4.8em;
+}
+
+.article:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* style for the heading of the article */
+.article-heading {
+  text-align: center;
+  font-size: 1.2em;
+  font-style: italic;
+  /* text-transform: uppercase; */
+}
+
+/* style for the link inside the article heading */
+.article-link {
+  color: #02b3e4;
+  text-decoration: none;
+}
+
+/* style for the hover and active state of the link */
+.article-link:hover,
+.article-link:active {
+  text-decoration: underline;
+}
+
+/* style for the content of article heading */
+.article-content {
+  text-align: center;
+  font-size: 1em;
+  letter-spacing: 1px;
+  word-spacing: 5px;
 }

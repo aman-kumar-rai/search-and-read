@@ -20,9 +20,9 @@ class Image extends React.Component {
 
     return (
       <figure>
-        <img src={condition ? src: './../src/images/icon-no-image.png' } alt={condition ? altText : 'No images available'} />
+        <img src={condition ? src: './../src/images/icon-no-image.png' } alt={condition ? altText : 'No image available'} />
         <figcaption>
-          {condition ? uploader : 'No images available'}
+          {condition ? uploader : 'No image available'}
         </figcaption>
       </figure>
     );
