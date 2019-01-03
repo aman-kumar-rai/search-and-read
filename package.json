@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode=development --open",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "deploy": "gh-pages -d dist"
   },
   "babel": {
     "presets": [
@@ -30,6 +31,7 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
+    "gh-pages": "^2.0.1",
     "html-webpack-plugin": "^3.2.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.26.1",
