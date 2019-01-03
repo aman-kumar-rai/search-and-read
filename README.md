@@ -10,10 +10,13 @@
 
 A simple app to search for a keyword, which gives an image and a list of articles
 
-To get started, open [the GitHub repo](https://github.com/aman-kumar-rai/search-and-read/) and clone or fork the project, and then 
+To get started,
 
-* execute ```npm install``` to install all the dependencies
-* execute ```npm start``` to start a local dev server which will open up the app in your default web browser
+* visit [this](https://aman-kumar-rai.github.io/search-and-read/) link and play around with the application
+* or open [the GitHub repo](https://github.com/aman-kumar-rai/search-and-read/) and clone or fork the project, and then 
+
+  * execute ```npm install``` to install all the dependencies
+  * execute ```npm start``` to start a local dev server which will open up the app in your default web browser
 
 ## Dependencies
 
